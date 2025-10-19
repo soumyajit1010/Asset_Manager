@@ -1,32 +1,36 @@
 package assetmamager.model;
 
-
+/**
+ * Abstract base class representing a general Employee.
+ * Demonstrates abstraction, encapsulation, and inheritance.
+ */
 
 // Employee class
-abstract class Employee {
+public abstract class Employee {
     private String employeeId;
     private String employeeName;
     private double salary;
-    private static int contractIdCounter;
-    private static int permanentIdCounter;
 
-    static {
-        contractIdCounter = 10000;
-        permanentIdCounter = 10000;
-    }
+    // Static counters to generate unique IDs for each type
+    private static int contractIdCounter = 10000;
+    private static int permanentIdCounter = 10000;
 
+    // Constructor
     public Employee(String employeeName) {
         setEmployeeName(employeeName);
     }
 
-    // Abstract method
-    public abstract void calculateSalary(float salaryFactor);
+    // Abstract method - subclasses must define their own salary calculation logic
+    public abstract void calculateSalary();
+
+
+    // ---- Getters & Setters ----
 
     public String getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(String employeeId) {
+    protected void setEmployeeId(String employeeId) {
         this.employeeId = employeeId;
     }
 
@@ -35,52 +39,59 @@ abstract class Employee {
     }
 
     public void setEmployeeName(String employeeName) {
-        if (employeeName != null && isValidName(employeeName)) {
-            this.employeeName = employeeName;
+        if (isValidName(employeeName)) {
+            this.employeeName = employeeName.trim();
         } else {
-            this.employeeName = null; // Invalid name set to null
+            throw new IllegalArgumentException("Invalid employee name: must contain at least two words, start with capital letters, and only alphabets.");
         }
-    }
-
-    private boolean isValidName(String name) {
-        if (name == null || name.trim().isEmpty()) return false;
-        String[] words = name.trim().split("\\s+");
-        if (words.length < 2) return false;
-        for (String word : words) {
-            if (word.length() < 2 || !Character.isUpperCase(word.charAt(0)) || !word.matches("[A-Za-z]+")) {
-                return false;
-            }
-        }
-        return true;
     }
 
     public double getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary > 0 ? salary : 0;
+    protected void setSalary(double salary) {
+        this.salary = Math.max(salary, 0);
     }
 
-    public static int getContractIdCounter() {
-        return contractIdCounter;
+
+    // ---- Utility Methods ----
+
+    /**
+     * Validates employee name: at least two words, capitalized, alphabetic only
+     */
+    private boolean isValidName(String name) {
+        if (name == null || name.trim().isEmpty()) return false;
+        String[] words = name.trim().split("\\s+");
+        if (words.length < 2) return false;
+
+        for (String word : words) {
+            if (!Character.isUpperCase(word.charAt(0)) || !word.matches("[A-Za-z]+")) {
+                return false;
+            }
+        }
+        return true;
     }
 
-    public static void setContractIdCounter(int contractIdCounter) {
-        Employee.contractIdCounter = contractIdCounter;
+
+    /**
+     * Generates unique ID for permanent employee
+     */
+    protected static String generatePermanentId() {
+        return "PERM-" + (permanentIdCounter++);
     }
 
-    public static int getPermanentIdCounter() {
-        return permanentIdCounter;
-    }
-
-    public static void setPermanentIdCounter(int permanentIdCounter) {
-        Employee.permanentIdCounter = permanentIdCounter;
+    /**
+     * Generates unique ID for contract employee
+     */
+    protected static String generateContractId() {
+        return "CONT-" + (contractIdCounter++);
     }
 
     @Override
     public String toString() {
-        return "Employee Id: " + getEmployeeId() + ", Employee Name: " + getEmployeeName();
+        return String.format("Employee ID: %s | Name: %s | Salary: %.2f",
+                employeeId, employeeName, salary);
     }
 }
 
