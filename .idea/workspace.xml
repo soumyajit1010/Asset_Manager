@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c075f0f6-e4ab-4b66-bf97-888312a1eda1" name="Changes" comment="Commit message: &quot;Refactored PermanentEmployee.java and improved model structure&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assetmamager/model/ContractEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assetmamager/model/ContractEmployee.java" afterDir="false" />
+    <list default="true" id="c075f0f6-e4ab-4b66-bf97-888312a1eda1" name="Changes" comment="Refactored ContractEmployee">
+      <change beforePath="$PROJECT_DIR$/src/assetmamager/model/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assetmamager/model/Asset.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +94,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760871137979</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactored ContractEmployee">
+      <option name="closed" value="true" />
+      <created>1760973153250</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760973153250</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,6 +119,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit message: &quot;Refactored Employee.java and improved model structure&quot;" />
     <MESSAGE value="Commit message: &quot;Refactored PermanentEmployee.java and improved model structure&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit message: &quot;Refactored PermanentEmployee.java and improved model structure&quot;" />
+    <MESSAGE value="Refactored ContractEmployee" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored ContractEmployee" />
   </component>
 </project>
