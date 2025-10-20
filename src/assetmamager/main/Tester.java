@@ -14,6 +14,7 @@ public class Tester {
 
         List<Asset> assets = new ArrayList<>();
 
+
         // Add assets safely
         addAsset(assets, "DSK-876761L", "Dell-Desktop", "2020-Dec-01");
         addAsset(assets, "DSK-876762L", "Acer-Desktop", "2021-Mar-31");
