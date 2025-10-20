@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c075f0f6-e4ab-4b66-bf97-888312a1eda1" name="Changes" comment="">
+    <list default="true" id="c075f0f6-e4ab-4b66-bf97-888312a1eda1" name="Changes" comment="Commit message: &quot;Refactored PermanentEmployee.java and improved model structure&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assetmamager/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assetmamager/model/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assetmamager/model/PermanentEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assetmamager/model/PermanentEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assetmamager/model/ContractEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assetmamager/model/ContractEmployee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +34,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Tester.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Tester.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="assetmamager.main" />
@@ -80,6 +79,39 @@
       <option name="presentableId" value="Default" />
       <updated>1760862603162</updated>
     </task>
+    <task id="LOCAL-00001" summary="Commit message: &quot;Refactored Employee.java and improved model structure&quot;">
+      <option name="closed" value="true" />
+      <created>1760871075328</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760871075328</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit message: &quot;Refactored PermanentEmployee.java and improved model structure&quot;">
+      <option name="closed" value="true" />
+      <created>1760871137979</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760871137979</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit message: &quot;Refactored Employee.java and improved model structure&quot;" />
+    <MESSAGE value="Commit message: &quot;Refactored PermanentEmployee.java and improved model structure&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit message: &quot;Refactored PermanentEmployee.java and improved model structure&quot;" />
   </component>
 </project>
