@@ -1,99 +1,97 @@
 package assetmamager.main;
 
 import assetmamager.model.Asset;
+import assetmamager.service.AssetService;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
-/**
- * Tester class to demonstrate Asset creation, validation, and correction.
- */
 public class Tester {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        AssetService service = new AssetService();
+        boolean running = true;
 
-        List<Asset> assets = new ArrayList<>();
+        while (running) {
+            System.out.println("\n=== ASSET MANAGER MENU ===");
+            System.out.println("1. Add Asset");
+            System.out.println("2. View All Assets");
+            System.out.println("3. Search Asset by ID");
+            System.out.println("4. Update Asset");
+            System.out.println("5. Delete Asset");
+            System.out.println("6. Exit");
+            System.out.print("Enter your choice: ");
+            int choice = sc.nextInt();
+            sc.nextLine(); // consume newline
 
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter Asset ID: ");
+                    String id = sc.nextLine();
+                    System.out.print("Enter Asset Name: ");
+                    String name = sc.nextLine();
+                    System.out.print("Enter Asset Expiry (YYYY-MMM-DD): ");
+                    String expiry = sc.nextLine();
 
-        // Add assets safely
-        addAsset(assets, "DSK-876761L", "Dell-Desktop", "2020-Dec-01");
-        addAsset(assets, "DSK-876762L", "Acer-Desktop", "2021-Mar-31");
-        addAsset(assets, "IPH-1101201h", "VoIP", "2020-Dec-31"); // Invalid
-        addAsset(assets, "IPH-110130h", "VoIP", "2020-Nov-30");
+                    try {
+                        service.addAsset(new Asset(id, name, expiry));
+                        System.out.println("✅ Asset added successfully!");
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("❌ Error: " + e.getMessage());
+                    }
+                    break;
 
-        System.out.println("\n--- All Assets ---\n");
-        printAssets(assets);
+                case 2:
+                    List<Asset> all = service.getAllAssets();
+                    if (all.isEmpty()) {
+                        System.out.println("⚠️ No assets found!");
+                    } else {
+                        System.out.println("\n--- All Assets ---");
+                        all.forEach(System.out::println);
+                    }
+                    break;
 
-        // Correct invalid asset IDs
-        System.out.println("\n--- Correcting Invalid Asset IDs ---\n");
-        for (Asset asset : assets) {
-            if (!asset.isValidId()) {
-                try {
-                    String correctedId = correctAssetId(asset.getAssetId());
-                    asset.setAssetId(correctedId);
-                    System.out.println("✅ Corrected asset: " + asset);
-                } catch (IllegalArgumentException e) {
-                    System.out.println("⚠️ Could not correct asset ID for: " + asset.getAssetName());
-                }
+                case 3:
+                    System.out.print("Enter Asset ID to search: ");
+                    String searchId = sc.nextLine();
+                    Asset found = service.findAssetById(searchId);
+                    System.out.println(found != null ? found : "⚠️ Asset not found!");
+                    break;
+
+                case 4:
+                    System.out.print("Enter Asset ID to update: ");
+                    String updateId = sc.nextLine();
+                    System.out.print("Enter new name: ");
+                    String newName = sc.nextLine();
+                    System.out.print("Enter new expiry (YYYY-MMM-DD): ");
+                    String newExpiry = sc.nextLine();
+
+                    if (service.updateAsset(updateId, newName, newExpiry))
+                        System.out.println("✅ Asset updated successfully!");
+                    else
+                        System.out.println("⚠️ Asset not found!");
+                    break;
+
+                case 5:
+                    System.out.print("Enter Asset ID to delete: ");
+                    String deleteId = sc.nextLine();
+                    if (service.deleteAsset(deleteId))
+                        System.out.println("🗑️ Asset deleted successfully!");
+                    else
+                        System.out.println("⚠️ Asset not found!");
+                    break;
+
+                case 6:
+                    running = false;
+                    System.out.println("👋 Exiting Asset Manager...");
+                    break;
+
+                default:
+                    System.out.println("❌ Invalid choice, please try again!");
             }
         }
 
-        System.out.println("\n--- Assets After Correction ---\n");
-        printAssets(assets);
-
-        // Optional: Check for expired assets
-        System.out.println("\n--- Checking Expired Assets (Before Today) ---\n");
-        String today = "2025-Oct-20"; // Example current date
-        for (Asset asset : assets) {
-            if (asset.isExpired(today)) {
-                System.out.println("⚠️ Expired Asset: " + asset);
-            }
-        }
-    }
-
-    // ---------------- Helper Methods ----------------
-
-    /**
-     * Adds an asset safely, prints error if invalid
-     */
-    private static void addAsset(List<Asset> assets, String id, String name, String expiry) {
-        try {
-            assets.add(new Asset(id, name, expiry));
-        } catch (IllegalArgumentException e) {
-            System.out.println("❌ Error creating asset: " + e.getMessage());
-        }
-    }
-
-    /**
-     * Prints a list of assets with index and warning for invalid IDs
-     */
-    private static void printAssets(List<Asset> assets) {
-        int counter = 1;
-        for (Asset asset : assets) {
-            System.out.println("Asset " + counter++ + ": " + asset);
-            if (!asset.isValidId()) {
-                System.out.println("⚠️ Warning: Invalid asset ID for " + asset.getAssetName());
-            }
-        }
-    }
-
-    /**
-     * Dummy correction logic for invalid asset IDs.
-     * Can be improved to auto-correct based on company rules.
-     */
-    private static String correctAssetId(String invalidId) {
-        if (invalidId == null || invalidId.length() < 11) return invalidId;
-
-        // Example correction: IPH assets
-        if (invalidId.startsWith("IPH-")) {
-            return "IPH-" + invalidId.substring(4, 10) + "h";
-        }
-
-        // Example correction: DSK/LTP assets
-        if (invalidId.startsWith("DSK-") || invalidId.startsWith("LTP-")) {
-            return invalidId.substring(0, 10) + "L";
-        }
-
-        return invalidId; // fallback
+        sc.close();
     }
 }
