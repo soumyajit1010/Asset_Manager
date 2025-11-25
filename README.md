@@ -50,16 +50,15 @@ Fully built with **pure Java** — no external dependencies, zero crashes, perfe
 
 ## Screenshots
 
-### Main Menu
-<img src="https://drive.google.com/file/d/1bq9yggXQJzU8ABU2hPqd1V2wbWTL0yUe/view?usp=sharing" alt="Main Menu" width="100%"/>
+## Main Menu
+![Main Menu](https://raw.githubusercontent.com/username/repo/branch/path/image.png)
 
-### Asset Manager
-<img src="(https://drive.google.com/file/d/1FhEPuA7vCp6LgaCPLlI1lgvslMwbczdP/view?usp=sharing)" alt="Asset Manager" width="100%"/>
+## Asset Manager
+![Asset Manager](https://raw.githubusercontent.com/username/repo/branch/path/image2.jpg)
 
-### Employee System
-<img src="[https://drive.google.com/file/d/1LqRqYvKv1V8726efGfOajsw_umHRKhI7/view?usp=sharing]" alt="Employee System" width="100%"/>
+## Employee System
+![Employee System](https://raw.githubusercontent.com/username/repo/branch/path/image3.png)
 
-*(Replace with real screenshots after pushing to GitHub!)*
 
 ## How to Run
 
