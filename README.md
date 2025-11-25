@@ -44,37 +44,32 @@ Fully built with **pure Java** — no external dependencies, zero crashes, perfe
 | ANSI Color Terminal UI        | Yes         |
 | Modular Design                | Yes         |
 
-## Project Structure
 
 ## Project Structure
 
 ```plaintext
-src/
-└── assetmamager/
-    ├── main/
-    │   ├── Main.java                ← Unified entry point & launcher
-    │   ├── AssetManagerApp.java     ← Full asset management (CRUD)
-    │   └── EmployeeManagerApp.java  ← Employee + asset assignment system
-    ├── model/
-    │   ├── Asset.java
-    │   ├── Employee.java
-    │   ├── PermanentEmployee.java
-    │   └── ContractEmployee.java
-    └── service/
-        ├── AssetDatabase.java       ← In-memory asset storage
-        └── EmployeeService.java     ← Singleton service (business logic)
+assetmamager/
+├── exception/
+│   ├── InvalidAssetException.java       ← Custom exception for invalid assets
+│   └── InvalidExperienceException.java  ← Custom exception for experience validation
+│
+├── main/
+│   ├── Main.java                ← Unified entry point & launcher
+│   ├── AssetManagerApp.java     ← Full Asset Management (CRUD + UI)
+│   └── EmployeeManagerApp.java  ← Employee Management + Asset Assignment
+│
+├── model/
+│   ├── Asset.java
+│   ├── Employee.java
+│   ├── ContractEmployee.java
+│   └── PermanentEmployee.java
+│
+├── service/
+    ├── AssetDatabase.java       ← In-memory asset storage
+    ├── AssetService.java        ← Asset business logic (if used)
+    ├── EmployeeService.java     ← Singleton – core employee & assignment logic
+    └── Resources.java
 ```
-
-## Screenshots
-
-## Main Menu
-![Main Menu](https://drive.google.com/file/d/1bq9yggXQJzU8ABU2hPqd1V2wbWTL0yUe/view?usp=sharing)
-
-## Asset Manager
-![Asset Manager](https://drive.google.com/file/d/1FhEPuA7vCp6LgaCPLlI1lgvslMwbczdP/view?usp=sharing)
-
-## Employee System
-![Employee System](https://drive.google.com/file/d/1LqRqYvKv1V8726efGfOajsw_umHRKhI7/view?usp=sharing)
 
 
 ## How to Run
