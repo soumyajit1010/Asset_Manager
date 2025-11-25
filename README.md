@@ -51,13 +51,13 @@ Fully built with **pure Java** — no external dependencies, zero crashes, perfe
 ## Screenshots
 
 ## Main Menu
-![Main Menu](https://raw.githubusercontent.com/username/repo/branch/path/image.png)
+![Main Menu](https://drive.google.com/file/d/1bq9yggXQJzU8ABU2hPqd1V2wbWTL0yUe/view?usp=sharing)
 
 ## Asset Manager
-![Asset Manager](https://raw.githubusercontent.com/username/repo/branch/path/image2.jpg)
+![Asset Manager](https://drive.google.com/file/d/1FhEPuA7vCp6LgaCPLlI1lgvslMwbczdP/view?usp=sharing)
 
 ## Employee System
-![Employee System](https://raw.githubusercontent.com/username/repo/branch/path/image3.png)
+![Employee System](https://drive.google.com/file/d/1LqRqYvKv1V8726efGfOajsw_umHRKhI7/view?usp=sharing)
 
 
 ## How to Run
