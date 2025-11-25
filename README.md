@@ -63,6 +63,7 @@ src/
     └── service/
         ├── AssetDatabase.java       ← In-memory asset storage
         └── EmployeeService.java     ← Singleton service (business logic)
+```
 
 ## Screenshots
 
