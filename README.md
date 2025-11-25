@@ -95,8 +95,8 @@ SOA University, Bhubaneswar
 
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)  
-[![Email](https://img.shields.io/badge/Email-Contact%20Me-c14438?style=for-the-badge&logo=gmail&logoColor=white)](soumyajitrout81@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/soumyajit1010)  
+[![Email](https://img.shields.io/badge/Email-Contact%20Me-c14438?style=for-the-badge&logo=gmail&logoColor=white)](mailto:soumyajitrout81@gmail.com)
 
 <br><br>
 
