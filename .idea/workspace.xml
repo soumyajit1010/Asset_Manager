@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c075f0f6-e4ab-4b66-bf97-888312a1eda1" name="Changes" comment="Updated Tester">
+      <change afterPath="$PROJECT_DIR$/src/assetmamager/main/AssetManagerApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assetmamager/main/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assetmamager/main/Tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assetmamager/main/Tester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assetmamager/model/Asset.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/assetmamager/model/Asset.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +37,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Tester.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.EmployeeTester.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.Tester.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="assetmamager.main" />
@@ -50,7 +55,33 @@
       <recent name="assetmamager.model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="EmployeeTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="assetmamager.main.EmployeeTester" />
+      <module name="Asset_Manager_System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assetmamager.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="assetmamager.main.Main" />
+      <module name="Asset_Manager_System" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="assetmamager.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="assetmamager.main.Tester" />
       <module name="Asset_Manager_System" />
@@ -66,6 +97,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.EmployeeTester" />
         <item itemvalue="Application.Tester" />
       </list>
     </recent_temporary>
@@ -135,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760984429611</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated Tester">
+      <option name="closed" value="true" />
+      <created>1761250359213</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1761250359213</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

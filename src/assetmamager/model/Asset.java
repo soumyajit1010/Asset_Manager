@@ -37,7 +37,7 @@ public class Asset {
 
     public void setAssetId(String assetId) {
         if (assetId != null && assetId.matches(ASSET_ID_REGEX)) {
-            this.assetId = assetId;
+            this.assetId = assetId.toUpperCase();
         } else {
             throw new IllegalArgumentException("Invalid assetId: " + assetId +
                     " (Format: DSK|LTP|IPH-######H/L)");
