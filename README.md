@@ -46,7 +46,23 @@ Fully built with **pure Java** — no external dependencies, zero crashes, perfe
 
 ## Project Structure
 
+## Project Structure
 
+```plaintext
+src/
+└── assetmamager/
+    ├── main/
+    │   ├── Main.java                ← Unified entry point & launcher
+    │   ├── AssetManagerApp.java     ← Full asset management (CRUD)
+    │   └── EmployeeManagerApp.java  ← Employee + asset assignment system
+    ├── model/
+    │   ├── Asset.java
+    │   ├── Employee.java
+    │   ├── PermanentEmployee.java
+    │   └── ContractEmployee.java
+    └── service/
+        ├── AssetDatabase.java       ← In-memory asset storage
+        └── EmployeeService.java     ← Singleton service (business logic)
 
 ## Screenshots
 
