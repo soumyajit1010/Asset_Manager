@@ -64,7 +64,7 @@ assetmamager/
 │   ├── ContractEmployee.java
 │   └── PermanentEmployee.java
 │
-├── service/
+└── service/
     ├── AssetDatabase.java       ← In-memory asset storage
     ├── AssetService.java        ← Asset business logic (if used)
     ├── EmployeeService.java     ← Singleton – core employee & assignment logic
