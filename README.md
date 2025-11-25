@@ -51,7 +51,7 @@ Fully built with **pure Java** — no external dependencies, zero crashes, perfe
 ## Screenshots
 
 ### Main Menu
-<img src="[https://via.placeholder.com/800x500/36393f/ffffff?text=Main+Menu+-+Beautiful+Box+Design](https://drive.google.com/file/d/1bq9yggXQJzU8ABU2hPqd1V2wbWTL0yUe/view?usp=sharing)" alt="Main Menu" width="100%"/>
+<img src="(https://drive.google.com/file/d/1bq9yggXQJzU8ABU2hPqd1V2wbWTL0yUe/view?usp=sharing)" alt="Main Menu" width="100%"/>
 
 ### Asset Manager
 <img src="[https://via.placeholder.com/800x500/36393f/ffffff?text=Asset+Manager+-+Add+Assets+with+Validation](https://drive.google.com/file/d/1FhEPuA7vCp6LgaCPLlI1lgvslMwbczdP/view?usp=sharing)" alt="Asset Manager" width="100%"/>
